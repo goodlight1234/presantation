@@ -26,24 +26,32 @@
         }
 
         .header {
-            background-color: #0971c2; /* 헤더 배경색 변경 */
-            color: #ffffff; /* 글씨색을 흰색으로 변경 */
+            background-color: #ffffff;
+            color: #ffffff;
             padding: 30px 20px;
             text-align: center;
             border-radius: 12px 12px 0 0;
-            margin: -20px -20px 30px -20px; /* 컨테이너 테두리에 맞게 확장 */
+            margin: -20px -20px 0 -20px;
         }
 
         .header h1 {
             font-size: 2.5em;
             font-weight: 700;
             margin: 0;
-            color: #ffffff;
+            color: #0971c2;
         }
         
         .header .meta-info {
             color: #e0e0e0;
             margin-top: 10px;
+        }
+
+        /* Gradient Divider */
+        .divider {
+            height: 4px;
+            background: linear-gradient(to right, #ffffff, #87b9e6, #0971c2);
+            margin: 0 -20px 30px -20px;
+            border: none;
         }
 
         .content {
@@ -104,12 +112,27 @@
             margin-top: 10px;
         }
 
+        /* Gradient Highlight Boxes */
         .highlight-box {
-            background-color: #e6f7ff;
             border: 1px solid #b3e0ff;
             border-radius: 8px;
             padding: 20px;
             margin: 20px 0;
+        }
+        
+        .highlight-box.past {
+            background: #e6f7ff; /* 과거 - 가장 밝은 색 */
+            border-color: #b3e0ff;
+        }
+
+        .highlight-box.present {
+            background: #d9effa; /* 현재 - 중간 색 */
+            border-color: #87c7e6;
+        }
+
+        .highlight-box.future {
+            background: #c3e2f5; /* 미래 - 가장 진한 색 */
+            border-color: #5aa1cc;
         }
         
         .highlight-box p {
@@ -138,8 +161,10 @@
 <div class="container">
     <div class="header">
         <h1>시노펙스, 창립 40주년 맞아 ‘기술 기반 조직개편’</h1>
-        <p class="meta-info">시노펙스 ・ 2025. 4. 18.</p>
+        <p class="meta-info"></p>
     </div>
+    
+    <hr class="divider">
 
     <div class="content">
         <p>“기술로 연결하고, 생명과 환경을 지키는 시노펙스”</p>
@@ -148,7 +173,7 @@
 
         <h2>시노펙스 기술 기반 성장 곡선</h2>
         
-        <div class="highlight-box">
+        <div class="highlight-box past">
             <p><strong>과거 (Foundation Stage)</strong></p>
             <ul>
                 <li>삼성전자 PBA 1차 벤더</li>
@@ -161,7 +186,7 @@
             </ul>
         </div>
 
-        <div class="highlight-box">
+        <div class="highlight-box present">
             <p><strong>현재 (Expansion Stage)</strong></p>
             <ul>
                 <li>삼성전자 FPCB 공정 내재화</li>
@@ -174,7 +199,7 @@
             </ul>
         </div>
         
-        <div class="highlight-box">
+        <div class="highlight-box future">
             <p><strong>미래 (Transformation Stage)</strong></p>
             <ul>
                 <li>전기차용 멤브레인 기술 융합 → 인공신장기 등 투석필터 혁신 확장</li>
@@ -210,4 +235,3 @@
 
 </body>
 </html>
-
