@@ -151,15 +151,55 @@
     margin-bottom: 20px;
 }
 
-.styled-message-box .message-slogan {
-    background-color: #e6f7ff;
-    border: 1px solid #b3e0ff;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-}
+.slogan-box {
+            position: relative;
+            width: fit-content;
+            margin: 50px auto;
+            padding: 40px 60px;
+            border: 2px solid #2a5298;
+            border-top: none;
+            border-bottom: none;
+            text-align: center;
+        }
+        .slogan-box::before {
+            content: '“';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 100px;
+            line-height: 1;
+            color: #2a5298;
+        }
+        .slogan-box::after {
+            content: '”';
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            font-size: 100px;
+            line-height: 1;
+            color: #2a5298;
+        }
+        .slogan-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.5;
+        }
+        .slogan-box .top-line,
+        .slogan-box .bottom-line {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background-color: #2a5298;
+            left: 0;
+            right: 0;
+        }
+        .slogan-box .top-line {
+            top: 0;
+        }
+        .slogan-box .bottom-line {
+            bottom: 0;
+        }
 
 .styled-message-box .message-slogan p {
     font-size: 1.8em;
@@ -258,8 +298,10 @@
         
        <div class="styled-message-box">
   <p class="message-title"><strong>시노펙스 2030을 향한 핵심 메시지</strong></p>
-  <div class="message-slogan">
-    <p>기술로 연결하고, 생명과 환경을 지키는 시노펙스</p>
+   <div class="slogan-box">
+        <span class="top-line"></span>
+        <span class="bottom-line"></span>
+        <p class="slogan-text">기술로 연결하고, 생명과 환경을 지키는 시노펙스</p>
   </div>
   <p class="message-body">
     전자기술로 삶을 더 스마트하게,<br>
