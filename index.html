@@ -154,7 +154,55 @@
             margin-left: auto;
             margin-right: auto;
         }
-    </style>
+     .slogan-box {
+            position: relative;
+            width: fit-content;
+            margin: 50px auto;
+            padding: 40px 60px;
+            border: 2px solid #2a5298;
+            border-top: none;
+            border-bottom: none;
+            text-align: center;
+        }
+        .slogan-box::before {
+            content: '“';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 100px;
+            line-height: 1;
+            color: #2a5298;
+        }
+        .slogan-box::after {
+            content: '”';
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            font-size: 100px;
+            line-height: 1;
+            color: #2a5298;
+        }
+        .slogan-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.5;
+        }
+        .slogan-box .top-line,
+        .slogan-box .bottom-line {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background-color: #2a5298;
+            left: 0;
+            right: 0;
+        }
+        .slogan-box .top-line {
+            top: 0;
+        }
+        .slogan-box .bottom-line {
+            bottom: 0;
+        } </style>
 </head>
 <body>
 
@@ -211,23 +259,27 @@
         <h2>새로운 2대 사업 부문 체계</h2>
         <div class="highlight-box">
             <p><span style="word-break: break-word; color: #0971c2; font-weight: bold;">① SE 부문</span></p>
-            <p><strong>SmartLife Electronics</strong> / 스마트라이프 전자솔루션 부문</p>
-            <p>주요 분야: FPCB SMT, PBA, 전기차용 대형 배터리 모듈, 인공신장기, 혈액분석기</p>
-            <p><strong>2030 비전</strong>: FPCB 기술 선도, 스마트폰·스마트카·이차전지 산업에서 시장 점유율 확대, 인공신장기 및 혈액분석기 기반 완성, 혈액투석 국내 점유율 30~50% 달성</p>
+            <p><strong>SmartLife Electronics</strong>  스마트라이프 전자솔루션 부문</p>
+            <p>주요 분야: FPCB SMT, PBA, 대형 배터리용 FPCB 모듈, 인공신장기, 혈액분석기 등</p>
+            <p><strong>2030 비전</strong>: FPCB 기술 선도 진입, 스마트폰·스마트카·이차전지 산업에서 FPCB기술 선도, 인공신장기 및 혈액분석기 기반 완성, 혈액투석 국내 점유율 30~50% 확보</p>
         </div>
         
         <div class="highlight-box">
             <p><span style="word-break: break-word; color: #0971c2; font-weight: bold;">② AMFS 부문</span></p>
-            <p><strong>Advanced Membrane & Filtration Systems</strong> / 고기능 멤브레인 및 필터 시스템 부문</p>
+            <p><strong>Advanced Membrane & Filtration Systems</strong> </p>
             <p>주요 분야: 반도체·바이오·의료·수처리·환경용 필터 및 멤브레인, 엔지니어링 서비스</p>
             <p><strong>2030 비전</strong>: 반도체, 바이오시밀러 등 초정밀 필터 시장 기술 리더십 확보, 필터 및 수처리용 멤브레인 + 엔지니어링 융합 서비스 구축, 혈액투석용 멤브레인 연 2천만 개 생산 체계 확보 및 국산화 100% 달성</p>
         </div>
         
         <div class="quote">
-            <p><strong>앞으로의 40년, 시노펙스는 어디로 가는가?</strong></p><br>
+            <p><strong>시노펙스 2030을 향한 핵심 메시지</strong></p><br> <div class="slogan-box">
+        <span class="top-line"></span>
+        <span class="bottom-line"></span>
+        <p class="slogan-text">기술로 연결하고, 생명과 환경을 지키는 시노펙스</p>
+    </div>
             <p>전자기술로 삶을 더 스마트하게,<br>필터기술로 환경을 더 깨끗하게,<br>의료기술로 생명을 더 건강하게,</p><br>
-            <p>시노펙스는 기술 중심을 넘어, 사람과 지구를 위한 가치 중심 기업으로 전환합니다.</p>
-            <p>2025년, 시노펙스 대전환의 원년. 앞으로의 40년을 함께 만들어갑시다.</p>
+            <p>이제는 전자기기, 멤브레인, 의료기기를 융합한 기술 기반 Total Solution 기업으로 진화하고 있습니다.</p>
+            <p>2025년, 시노펙스 대전환의 원년. 앞으로의 40년, 세계가 기대하는 시노팩스를 함께 만들어갑시다.</p>
             <br><p class="quote-author">– 시노펙스 대표이사 손경익 드림</p>
         </div>
     </div>
@@ -235,4 +287,5 @@
 
 </body>
 </html>
+
 
