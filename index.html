@@ -90,27 +90,7 @@
             margin-bottom: 8px;
         }
 
-        .quote {
-            background-color: #f0f8ff;
-            border-left: 4px solid #007bff;
-            padding: 20px;
-            margin: 20px 0;
-            font-style: italic;
-            color: #444;
-            border-radius: 4px;
-        }
-
-        .quote p {
-            margin: 0;
-            text-align: justify;
-        }
-
-        .quote-author {
-            text-align: right;
-            font-style: normal;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+     
 
         /* Gradient Highlight Boxes */
         .highlight-box {
@@ -154,55 +134,60 @@
             margin-left: auto;
             margin-right: auto;
         }
-     .slogan-box {
-            position: relative;
-            width: fit-content;
-            margin: 50px auto;
-            padding: 40px 60px;
-            border: 2px solid #2a5298;
-            border-top: none;
-            border-bottom: none;
-            text-align: center;
-        }
-        .slogan-box::before {
-            content: '“';
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            font-size: 100px;
-            line-height: 1;
-            color: #2a5298;
-        }
-        .slogan-box::after {
-            content: '”';
-            position: absolute;
-            bottom: -20px;
-            right: 20px;
-            font-size: 100px;
-            line-height: 1;
-            color: #2a5298;
-        }
-        .slogan-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            line-height: 1.5;
-        }
-        .slogan-box .top-line,
-        .slogan-box .bottom-line {
-            content: '';
-            position: absolute;
-            height: 2px;
-            background-color: #2a5298;
-            left: 0;
-            right: 0;
-        }
-        .slogan-box .top-line {
-            top: 0;
-        }
-        .slogan-box .bottom-line {
-            bottom: 0;
-        } </style>
+     /* 새로운 디자인을 위한 스타일 */
+.styled-message-box {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.styled-message-box .message-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #004085;
+    margin-bottom: 20px;
+}
+
+.styled-message-box .message-slogan {
+    background-color: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.styled-message-box .message-slogan p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #0971c2;
+    margin: 0;
+}
+
+.styled-message-box .message-body {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.8;
+    margin: 30px 0;
+}
+
+.styled-message-box .message-closing {
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.styled-message-box .message-author {
+    font-size: 1em;
+    font-style: italic;
+    color: #777;
+    margin-top: 20px;
+}</style>
 </head>
 <body>
 
@@ -271,22 +256,26 @@
             <p><strong>2030 비전</strong>: 반도체, 바이오시밀러 등 초정밀 필터 시장 기술 리더십 확보, 필터 및 수처리용 멤브레인 + 엔지니어링 융합 서비스 구축, 혈액투석용 멤브레인 연 2천만 개 생산 체계 확보 및 국산화 100% 달성</p>
         </div>
         
-        <div class="quote">
-            <p class="center-text"><strong>시노펙스 2030을 향한 핵심 메시지</strong></p> <div class="slogan-box">
-        <span class="top-line"></span>
-        <span class="bottom-line"></span>
-        <p class="slogan-text">기술로 연결하고, 생명과 환경을 지키는 시노펙스</p>
-    </div>
-            <p>전자기술로 삶을 더 스마트하게,<br>필터기술로 환경을 더 깨끗하게,<br>의료기술로 생명을 더 건강하게,</p><br>
-            <p>이제는 전자기기, 멤브레인, 의료기기를 융합한 기술 기반 Total Solution 기업으로 진화하고 있습니다.</p>
-            <p>2025년, 시노펙스 대전환의 원년. 앞으로의 40년, 세계가 기대하는 시노팩스를 함께 만들어갑시다.</p>
-            <br><p class="quote-author">– 시노펙스 대표이사 손경익 드림</p>
-        </div>
-    </div>
+       <div class="styled-message-box">
+  <p class="message-title"><strong>시노펙스 2030을 향한 핵심 메시지</strong></p>
+  <div class="message-slogan">
+    <p>기술로 연결하고, 생명과 환경을 지키는 시노펙스</p>
+  </div>
+  <p class="message-body">
+    전자기술로 삶을 더 스마트하게,<br>
+    필터기술로 환경을 더 깨끗하게,<br>
+    의료기술로 생명을 더 건강하게,<br><br>
+    이제는 전자기기, 멤브레인, 의료기기를 융합한 기술 기반 Total Solution 기업으로 진화하고 있습니다.
+  </p>
+  <p class="message-closing">
+    2025년, 시노펙스 대전환의 원년. 앞으로의 40년, 세계가 기대하는 시노팩스를 함께 만들어갑시다.
+  </p>
+  <p class="message-author">– 시노펙스 대표이사 손경익 드림</p>
 </div>
 
 </body>
 </html>
+
 
 
 
