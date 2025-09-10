@@ -1,371 +1,389 @@
-<!DOCTYPE html> 
- <html lang="ko"> 
- <head> 
-     <meta charset="UTF-8"> 
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-     <title>시노펙스 뉴스</title> 
-     <style> 
-         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap'); 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시노펙스 뉴스</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
-         body { 
-             font-family: 'Noto Sans KR', sans-serif; 
-             line-height: 1.6; 
-             color: #333; 
-             background-color: #f8f8f8; 
-             margin: 0; 
-             padding: 0; 
-         } 
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
 
-         .container { 
-             max-width: 900px; 
-             margin: 40px auto; 
-             padding: 20px; 
-             background-color: #fff; 
-             border-radius: 12px; 
-             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-         } 
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-         .header { 
-             background-color: #ffffff; 
-             color: #ffffff; 
-             padding: 30px 20px; 
-             text-align: center; 
-             border-radius: 12px 12px 0 0; 
-             margin: -20px -20px 0 -20px; 
-         } 
+        .header {
+            background-color: #ffffff;
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            margin: -20px -20px 0 -20px;
+        }
 
-         .header h1 { 
-             font-size: 2.5em; 
-             font-weight: 700; 
-             margin: 0; 
-             color: #0971c2; 
-         } 
-          
-         .header .meta-info { 
-             color: #e0e0e0; 
-             margin-top: 10px; 
-         } 
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 0;
+            color: #0971c2;
+        }
+        
+        .header .meta-info {
+            color: #e0e0e0;
+            margin-top: 10px;
+        }
 
-         /* Gradient Divider */ 
-         .divider { 
-             height: 4px; 
-             background: linear-gradient(to right, #ffffff, #87b9e6, #0971c2); 
-             margin: 0 -20px 30px -20px; 
-             border: none; 
-         } 
+        /* Gradient Divider */
+        .divider {
+            height: 4px;
+            background: linear-gradient(to right, #ffffff, #87b9e6, #0971c2);
+            margin: 0 -20px 30px -20px;
+            border: none;
+        }
 
-         .content { 
-             padding: 0 20px; 
-         } 
+        .content {
+            padding: 0 20px;
+        }
 
-         .content h2 { 
-             font-size: 1.8em; 
-             color: #004085; 
-             margin-top: 30px; 
-             margin-bottom: 15px; 
-         } 
+        .content h2 {
+            font-size: 1.8em;
+            color: #004085;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
 
-         .content h3 { 
-             font-size: 1.4em; 
-             font-weight: 700; 
-             color: #0056b3; 
-             margin-top: 25px; 
-             margin-bottom: 15px; 
-             border-left: 4px solid #007bff; 
-             padding-left: 10px; 
-         } 
+        .content h3 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #0056b3;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+        }
 
-         .content p { 
-             margin-bottom: 15px; 
-             text-align: justify; 
-         } 
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
 
-         ul { 
-             list-style-type: disc; 
-             padding-left: 25px; 
-             margin-bottom: 20px; 
-         } 
+        ul {
+            list-style-type: disc;
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
 
-         li { 
-             margin-bottom: 8px; 
-         } 
+        li {
+            margin-bottom: 8px;
+        }
 
-       
+     
 
-         /* Gradient Highlight Boxes */ 
-         .highlight-box { 
-             border: 1px solid #b3e0ff; 
-             border-radius: 8px; 
-             padding: 20px; 
-             margin: 20px 0; 
-         } 
-          
-         .highlight-box.past { 
-             background: #e6f7ff; /* 과거 - 가장 밝은 색 */ 
-             border-color: #b3e0ff; 
-         } 
+        /* Gradient Highlight Boxes */
+        .highlight-box {
+            border: 1px solid #b3e0ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box.past {
+            background: #e6f7ff; /* 과거 - 가장 밝은 색 */
+            border-color: #b3e0ff;
+        }
 
-         .highlight-box.present { 
-             background: #d9effa; /* 현재 - 중간 색 */ 
-             border-color: #87c7e6; 
-         } 
+        .highlight-box.present {
+            background: #d9effa; /* 현재 - 중간 색 */
+            border-color: #87c7e6;
+        }
 
-         .highlight-box.future { 
-             background: #c3e2f5; /* 미래 - 가장 진한 색 */ 
-             border-color: #5aa1cc; 
-         } 
-          
-         .highlight-box p { 
-             margin: 0; 
-         } 
+        .highlight-box.future {
+            background: #c3e2f5; /* 미래 - 가장 진한 색 */
+            border-color: #5aa1cc;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+        }
 
-         .strong-highlight { 
-             font-weight: bold; 
-             color: #007bff; 
-         } 
+        .strong-highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
 
-         .article-image { 
-             max-width: 100%; 
-             height: auto; 
-             border-radius: 8px; 
-             margin-top: 20px; 
-             margin-bottom: 20px; 
-             display: block; 
-             margin-left: auto; 
-             margin-right: auto; 
-         } 
-      /* 새로운 디자인을 위한 스타일 */ 
-  .slogan-box { 
-             position: relative; 
-             width: fit-content; 
-             margin: 50px auto; /* 가운데 정렬 핵심 */ 
-             padding: 40px 60px; 
-             border: 2px solid #2a5298; 
-             border-top: none; 
-             border-bottom: none; 
-             text-align: center; 
-         } 
-         .slogan-box::before { 
-             content: '“'; 
-             position: absolute; 
-             top: -20px; 
-             left: 20px; 
-             font-size: 100px; 
-             line-height: 1; 
-             color: #2a5298; 
-         } 
-         .slogan-box::after { 
-             content: '”'; 
-             position: absolute; 
-             bottom: -20px; 
-             right: 20px; 
-             font-size: 100px; 
-             line-height: 1; 
-             color: #2a5298; 
-         } 
-         .slogan-text { 
-             font-size: 24px; 
-             font-weight: bold; 
-             color: #333; 
-             line-height: 1.5; 
-         } 
-         
-         .slogan-box .bottom-line { 
-             content: ''; 
-             position: absolute; 
-             height: 2px; 
-             background-color: #2a5298; 
-             left: 0; 
-             right: 0; 
-         } 
-         .slogan-box .top-line { 
-             top: 0; 
-         } 
-         .slogan-box .bottom-line { 
-             bottom: 0; 
-         } 
-          
-         .styled-message-box { 
-             background-color: #f9f9f9; 
-             border: 1px solid #e0e0e0; 
-             border-radius: 12px; 
-             padding: 30px; 
-             margin: 40px 0; 
-             text-align: center; 
-         } 
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+     /* 새로운 디자인을 위한 스타일 */
+.styled-message-box {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px 0;
+    text-align: center;
+}
 
-         .styled-message-box .message-title { 
-             font-size: 1.5em; 
-             font-weight: 700; 
-             color: #004085; 
-             margin-bottom: 20px; 
-         } 
+.styled-message-box .message-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #004085;
+    margin-bottom: 20px;
+}
 
-         .styled-message-box .message-body { 
-             font-size: 1em; 
-             color: #555; 
-             line-height: 1.8; 
-             margin: 30px 0; 
-         } 
+.slogan-box {
+            position: relative;
+            width: fit-content;
+            margin: 50px auto;
+            padding: 40px 60px;
+            border: 2px solid #2a5298;
+            border-top: none;
+            border-bottom: none;
+            text-align: center;
+        }
+        .slogan-box::before {
+            content: '“';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 100px;
+            line-height: 1;
+            color: #2a5298;
+        }
+        .slogan-box::after {
+            content: '”';
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            font-size: 100px;
+            line-height: 1;
+            color: #2a5298;
+        }
+        .slogan-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.5;
+        }
+        .slogan-box .top-line,
+        .slogan-box .bottom-line {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background-color: #2a5298;
+            left: 0;
+            right: 0;
+        }
+        .slogan-box .top-line {
+            top: 0;
+        }
+        .slogan-box .bottom-line {
+            bottom: 0;
+        }
 
-         .styled-message-box .message-closing { 
-             font-size: 1em; 
-             font-weight: 500; 
-             color: #333; 
-             margin-bottom: 20px; 
-         } 
+.styled-message-box .message-slogan p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #0971c2;
+    margin: 0;
+}
 
-         .styled-message-box .message-author { 
-             font-size: 1em; 
-             font-style: italic; 
-             color: #777; 
-             margin-top: 20px; 
-         }/* 새로 추가된 스타일 */ 
- .intro-section { 
-     margin-bottom: 40px; 
- } 
+.styled-message-box .message-body {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.8;
+    margin: 30px 0;
+}
 
- .intro-section p { 
-     font-size: 1.1em; 
-     line-height: 1.8; 
- } 
+.styled-message-box .message-closing {
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
 
- .slogan-highlight { 
-     font-size: 1.4em; 
-     font-weight: bold; 
-     color: #004085; 
-     text-align: center; 
-     margin-bottom: 30px; 
- } 
+.styled-message-box .message-author {
+    font-size: 1em;
+    font-style: italic;
+    color: #777;
+    margin-top: 20px;
+}/* 새로 추가된 스타일 */
+.intro-section {
+    margin-bottom: 40px;
+}
 
- .history-box { 
-     background-color: #f8f8f8; 
-     border: 1px solid #e0e0e0; 
-     border-radius: 10px; 
-     padding: 25px; 
-     margin-bottom: 30px; 
- } 
+.intro-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
 
- .history-box p { 
-     margin: 0 0 15px 0; 
- } 
+.slogan-highlight {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #004085;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
- .history-box p strong { 
-     color: #007bff; 
- } 
+.history-box {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.history-box p {
+    margin: 0 0 15px 0;
+}
+
+.history-box p strong {
+    color: #007bff;
+}
+
+.highlight-date {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0971c2;
+    display: inline-block;
+}
+
+.future-vision {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.future-vision strong {
+    color: #004085;
+}</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>시노펙스, 창립 40주년 맞아 ‘기술 기반 조직개편’</h1>
+        <p class="meta-info"></p>
+    </div>
+    
+    <hr class="divider">
+
+   <div class="intro-section">
+    <p class="slogan-highlight">“기술로 연결하고, 생명과 환경을 지키는 시노펙스”</p>
+    
+    <div class="history-box">
+        <p><strong><span class="highlight-date">2025년 4월 18일</span>, 시노펙스 창립 40주년</strong>을 맞았습니다.</p>
+        <p>
+            우리는 <strong><span class="highlight-date">2006년 6월 30일</span>, 유원텔레콤</strong>(삼성전자 스마트폰 PBA/LCD 모듈 1차 벤더)과
+            <strong>신양피앤피</strong>(포스코 철강 포장재 및 필터 협력사)의 합병으로 탄생했습니다.
+        </p>
+        <p>
+            두 회사의 기술과 철학을 융합하고자 **Synergy, Innovation, Apex**의 정신을 담아 **시노펙스**라는 이름으로 새롭게 출범했습니다.
+            <br>‘Dynamic Synopex’라는 가치 아래 전자기술과 필터기술의 경계를 허물고 융합의 길을 걸어왔으며,
+            오늘날 반도체·헬스케어·환경을 아우르는 **기술기업으로 도약**하고 있습니다.
+        </p>
+    </div>
+
+    <p class="future-vision">이제 우리는 시노펙스의 다음 40년을 위해, <strong>기술 기반 성장 곡선을 재정의</strong>하고 **새로운 조직 개편**을 시작합니다.</p>
+</div>
+
+        <h2>시노펙스 기술 기반 성장 곡선</h2>
+        
+        <div class="highlight-box past">
+            <p><strong>과거 (Foundation Stage)</strong></p>
+            <ul>
+                <li>삼성전자 PBA 1차 벤더</li>
+                <li>포스코 전광 포장재 및 필터 협력사</li>
+                <li>산업용 및 수처리용 Depth 필터 및 카트리지 필터 제조</li>
+                <li>삼성전자 소형 LCD 및 터치스크린 모듈 제조</li>
+                <li>삼성디스플레이 LCD 공정용 필터 국산화</li>
+                <li>삼성전자 반도체 CMP·POU 필터 국산화</li>
+                <li>수처리용 PAN UF 및 기체분리막 기술 인수</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box present">
+            <p><strong>현재 (Expansion Stage)</strong></p>
+            <ul>
+                <li>삼성전자 FPCB 공정 내재화</li>
+                <li>반도체용 초미세 Melt-blown 필터 국산화</li>
+                <li>ePTFE 소재 및 설비 자체 개발, AF 필터 양산 기반 확보</li>
+                <li>수소연료전지용 PEM 국산화</li>
+                <li>LG화학 수처리용 PVDF MF 멤브레인 기술 인수</li>
+                <li>혈액투석용 인공신장기, 정수기 및 필터 국산화</li>
+                <li>혈구분석기 개발</li>
+            </ul>
+        </div>
+        
+        <div class="highlight-box future">
+            <p><strong>미래 (Transformation Stage)</strong></p>
+            <ul>
+                <li>전기차용 멤브레인 기술 융합 → 인공신장기 등 투석필터 혁신 확장</li>
+                <li>스마트 의료·헬스케어 서비스 기반의 Total Solution Provider로 전환</li>
+                <li>전기차 대형 배터리용 FPCB 모듈 양산</li>
+            </ul>
+        </div>
+
+        <h2>새로운 2대 사업 부문 체계</h2>
+        <div class="highlight-box">
+            <p><span style="word-break: break-word; color: #0971c2; font-weight: bold;">① SE 부문</span></p>
+            <p><strong>SmartLife Electronics</strong>  스마트라이프 전자솔루션 부문</p>
+            <p>주요 분야: FPCB SMT, PBA, 대형 배터리용 FPCB 모듈, 인공신장기, 혈액분석기 등</p>
+            <p><strong>2030 비전</strong>: FPCB 기술 선도 진입, 스마트폰·스마트카·이차전지 산업에서 FPCB기술 선도, 인공신장기 및 혈액분석기 기반 완성, 혈액투석 국내 점유율 30~50% 확보</p>
+        </div>
+        
+        <div class="highlight-box">
+            <p><span style="word-break: break-word; color: #0971c2; font-weight: bold;">② AMFS 부문</span></p>
+            <p><strong>Advanced Membrane & Filtration Systems</strong> </p>
+            <p>주요 분야: 반도체·바이오·의료·수처리·환경용 필터 및 멤브레인, 엔지니어링 서비스</p>
+            <p><strong>2030 비전</strong>: 반도체, 바이오시밀러 등 초정밀 필터 시장 기술 리더십 확보, 필터 및 수처리용 멤브레인 + 엔지니어링 융합 서비스 구축, 혈액투석용 멤브레인 연 2천만 개 생산 체계 확보 및 국산화 100% 달성</p>
+        </div>
+        
+       <div class="styled-message-box">ㅁㅁ
+  <p class="message-title"><strong>시노펙스 2030을 향한 핵심 메시지</strong></p>
+   <div class="slogan-box">
+        <span class="top-line"></span>
+        <span class="bottom-line"></span>
+        <p class="slogan-text">기술로 연결하고, 생명과 환경을 지키는 시노펙스</p>
+  </div>
+  <p class="message-body">
+    전자기술로 삶을 더 스마트하게,<br>
+    필터기술로 환경을 더 깨끗하게,<br>
+    의료기술로 생명을 더 건강하게,<br><br>
+    이제는 전자기기, 멤브레인, 의료기기를 융합한 기술 기반 Total Solution 기업으로 진화하고 있습니다.
+  </p>
+  <p class="message-closing">
+    2025년, 시노펙스 대전환의 원년. 앞으로의 40년, 세계가 기대하는 시노팩스를 함께 만들어갑시다.
+  </p>
+  <p class="message-author">– 시노펙스 대표이사 손경익 드림</p>
+</div>
+
+</body>
+</html>
 
 
- .future-vision { 
-     font-size: 1.2em; 
-     font-weight: 500; 
-     color: #333; 
-     text-align: center; 
-     margin-top: 40px; 
- } 
 
- .future-vision strong { 
-     color: #004085; 
- }</style> 
- </head> 
- <body> 
 
- <div class="container"> 
-     <div class="header"> 
-         <h1>시노펙스, 창립 40주년 맞아 ‘기술 기반 조직개편’</h1> 
-         <p class="meta-info"></p> 
-     </div> 
-      
-     <hr class="divider"> 
 
-    <div class="intro-section"> 
-     <p class="slogan-highlight">“기술로 연결하고, 생명과 환경을 지키는 시노펙스”</p> 
-      
-     <div class="history-box"> 
-         <p><strong>2025년 4월 18일</span>, 시노펙스 창립 40주년</strong>을 맞았습니다.</p> 
-         <p> 
-             우리는 <strong>2006년 6월 30일</span>, 유원텔레콤</strong>(삼성전자 스마트폰 PBA/LCD 모듈 1차 벤더)과 
-             <strong>신양피앤피</strong>(포스코 철강 포장재 및 필터 협력사)의 합병으로 탄생했습니다. 
-         </p> 
-         <p> 
-             두 회사의 기술과 철학을 융합하고자 Synergy, Innovation, Apex의 정신을 담아 시노펙스라는 이름으로 새롭게 출범했습니다. 
-             <br>‘Dynamic Synopex’라는 가치 아래 전자기술과 필터기술의 경계를 허물고 융합의 길을 걸어왔으며, 
-             오늘날 반도체·헬스케어·환경을 아우르는 기술기업으로 도약하고 있습니다. 
-         </p> 
-     </div> 
-
-     <p class="future-vision">이제 우리는 시노펙스의 다음 40년을 위해, <strong>기술 기반 성장 곡선을 재정의</strong>하고 새로운 조직 개편을 시작합니다.</p> 
- </div> 
-
-         <h2>시노펙스 기술 기반 성장 곡선</h2> 
-          
-         <div class="highlight-box past"> 
-             <p><strong>과거 (Foundation Stage)</strong></p> 
-             <ul> 
-                 <li>삼성전자 PBA 1차 벤더</li> 
-                 <li>포스코 전광 포장재 및 필터 협력사</li> 
-                 <li>산업용 및 수처리용 Depth 필터 및 카트리지 필터 제조</li> 
-                 <li>삼성전자 소형 LCD 및 터치스크린 모듈 제조</li> 
-                 <li>삼성디스플레이 LCD 공정용 필터 국산화</li> 
-                 <li>삼성전자 반도체 CMP·POU 필터 국산화</li> 
-                 <li>수처리용 PAN UF 및 기체분리막 기술 인수</li> 
-             </ul> 
-         </div> 
-
-         <div class="highlight-box present"> 
-             <p><strong>현재 (Expansion Stage)</strong></p> 
-             <ul> 
-                 <li>삼성전자 FPCB 공정 내재화</li> 
-                 <li>반도체용 초미세 Melt-blown 필터 국산화</li> 
-                 <li>ePTFE 소재 및 설비 자체 개발, AF 필터 양산 기반 확보</li> 
-                 <li>수소연료전지용 PEM 국산화</li> 
-                 <li>LG화학 수처리용 PVDF MF 멤브레인 기술 인수</li> 
-                 <li>혈액투석용 인공신장기, 정수기 및 필터 국산화</li> 
-                 <li>혈구분석기 개발</li> 
-             </ul> 
-         </div> 
-          
-         <div class="highlight-box future"> 
-             <p><strong>미래 (Transformation Stage)</strong></p> 
-             <ul> 
-                 <li>전기차용 멤브레인 기술 융합 → 인공신장기 등 투석필터 혁신 확장</li> 
-                 <li>스마트 의료·헬스케어 서비스 기반의 Total Solution Provider로 전환</li> 
-                 <li>전기차 대형 배터리용 FPCB 모듈 양산</li> 
-             </ul> 
-         </div> 
-
-         <h2>새로운 2대 사업 부문 체계</h2> 
-         <div class="highlight-box"> 
-             <p><span style="word-break: break-word; color: #0971c2; font-weight: bold;">① SE 부문</span></p> 
-             <p><strong>SmartLife Electronics</strong>  스마트라이프 전자솔루션 부문</p> 
-             <p>주요 분야: FPCB SMT, PBA, 대형 배터리용 FPCB 모듈, 인공신장기, 혈액분석기 등</p> 
-             <p><strong>2030 비전</strong>: FPCB 기술 선도 진입, 스마트폰·스마트카·이차전지 산업에서 FPCB기술 선도, 인공신장기 및 혈액분석기 기반 완성, 혈액투석 국내 점유율 30~50% 확보</p> 
-         </div> 
-          
-         <div class="highlight-box"> 
-             <p><span style="word-break: break-word; color: #0971c2; font-weight: bold;">② AMFS 부문</span></p> 
-             <p><strong>Advanced Membrane & Filtration Systems</strong> </p> 
-             <p>주요 분야: 반도체·바이오·의료·수처리·환경용 필터 및 멤브레인, 엔지니어링 서비스</p> 
-             <p><strong>2030 비전</strong>: 반도체, 바이오시밀러 등 초정밀 필터 시장 기술 리더십 확보, 필터 및 수처리용 멤브레인 + 엔지니어링 융합 서비스 구축, 혈액투석용 멤브레인 연 2천만 개 생산 체계 확보 및 국산화 100% 달성</p> 
-         </div> 
-          
-        <div class="styled-message-box"> 
-   <p class="message-title"><strong>시노펙스 2030을 향한 핵심 메시지</strong></p> 
-    <div class="slogan-box"> 
-         <span class="top-line"></span> 
-         <span class="bottom-line"></span> 
-         <p class="slogan-text">기술로 연결하고, 생명과 환경을 지키는 시노펙스</p> 
-   </div> 
-   <p class="message-body"> 
-     전자기술로 삶을 더 스마트하게,<br> 
-     필터기술로 환경을 더 깨끗하게,<br> 
-     의료기술로 생명을 더 건강하게,<br><br> 
-     이제는 전자기기, 멤브레인, 의료기기를 융합한 기술 기반 Total Solution 기업으로 진화하고 있습니다. 
-   </p> 
-   <p class="message-closing"> 
-     2025년, 시노펙스 대전환의 원년. 앞으로의 40년, 세계가 기대하는 시노팩스를 함께 만들어갑시다. 
-   </p> 
-   <p class="message-author">– 시노펙스 대표이사 손경익 드림</p> 
- </div> 
-
- </body> 
- </html>
